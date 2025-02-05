@@ -98,7 +98,7 @@ header {
   }
 
   to {
-    width: 30%;
+    width: 95%;
   }
 }
 
@@ -124,7 +124,27 @@ header {
     margin-left: 40%;
     border-right: 0.1em solid;
     width: 0;
-    animation: typing 6s steps(30, end) 2s infinite, blink 0.75s step-end infinite;
+  }
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+  
+    to {
+      width: 30%;
+    }
+  }
+  
+  @keyframes blink {
+  
+    from,
+    to {
+      border-color: transparent;
+    }
+  
+    50% {
+      border-color: black;
+    }
   }
 }
 
