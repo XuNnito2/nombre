@@ -357,6 +357,9 @@ i {
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
 }
+#navbarSupportedContent > ul > li:hover > a {
+  color: white !important; /* Forzar el color blanco */
+}
 
 #navbarSupportedContent a:not(:only-child):after {
   content: "\f105";
