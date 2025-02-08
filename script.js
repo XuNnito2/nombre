@@ -93,3 +93,14 @@ function cerrarAnuncio() {
 setTimeout(function() {
   cerrarAnuncio();
 }, 6000);
+
+
+
+
+
+window.onload = function() {
+  setTimeout(function() {
+    document.querySelector('.loader').classList.add('hidden');
+    document.getElementById('contenido').style.display = 'block';
+  }, 2000);
+};

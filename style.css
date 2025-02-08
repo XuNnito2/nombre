@@ -215,7 +215,7 @@ header {
   padding: 10px;
   width: 98.8%;
   margin-top:0.8%;
-  background: linear-gradient(to bottom, #8eb0b1a6 20%, #7d8882ce 50%);
+  background: linear-gradient(to bottom, #8eb0b146 20%, #e7faefce 50%);
   animation: gradient 5s ease infinite;
 }
  .xun3 img {
@@ -228,6 +228,7 @@ header {
 
 @media (max-width: 767px) {
   .xun3 {
+    margin-top: -20px;
     margin-left: 8px;
     width: 96%;
   }
@@ -746,4 +747,118 @@ main {
     top: 140px;
     right: 12%;
   }
+}
+
+
+
+.container-servicio {
+  margin: 0 auto;
+  padding: 0;
+  max-width: 900px;
+  display: flex;
+  justify-content: center; /* Centrar horizontalmente */
+  flex-wrap: wrap; /* Permite que los items se vayan a la siguiente línea */
+}
+
+.service {
+  text-align: center;
+  background: #ffffff;
+  padding: 10px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  width: 100%;
+  max-width: 400px;
+  border-radius: 10px;
+  box-shadow: 10px 4px 10px rgba(0, 0, 0, 0.1);
+}
+.service:hover {
+  border:rgba(88, 81, 81, 0.7) solid 1px;
+}
+
+
+.service img {
+  display: block;
+  margin: 15px auto;
+  border-radius:10px;
+  width: 90%; /* Tamaño más grande */
+  height: auto;
+}
+
+.service video {
+  display: block;
+  margin: 15px auto;
+  border-radius:10px;
+  width: 90%; /* Tamaño más grande */
+  height: auto;
+}
+
+.service img:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.service strong {
+  font-size: 22px;
+  display: block;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+/* Contenedor del loader */
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(30deg, #8a8383 20%, #cee4e4 50%, #ffffff 100%);
+  background-size: 200% 200%; /* Aumentamos el tamaño del fondo para que se pueda animar */
+  animation: gradient 15s ease infinite;
+  animation: moverColores 4s;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+}
+
+/* Estilos de los puntitos */
+.dots {
+  display: flex;
+  gap: 8px;
+}
+
+.dot {
+  width: 20px;
+  height: 20px;
+  background-color: #5c6164;
+  border-radius: 50%;
+  animation: bounce 1.5s infinite ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white; /* Color del texto */
+  font-size: 12px; /* Tamaño del texto */
+}
+
+.dot:nth-child(1) { animation-delay: 0s; }
+.dot:nth-child(2) { animation-delay: 0.2s; }
+.dot:nth-child(3) { animation-delay: 0.4s; }
+.dot:nth-child(4) { animation-delay: 0.6s; }
+.dot:nth-child(5) { animation-delay: 0.8s; }
+.dot:nth-child(6) { animation-delay: 1s; }
+.dot:nth-child(7) { animation-delay: 1.2s; }
+.dot:nth-child(8) { animation-delay: 1.4s; }
+
+@keyframes bounce {
+  0%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Ocultar loader después de 3 segundos */
+.hidden {
+  display: none;
 }
