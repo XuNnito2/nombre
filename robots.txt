@@ -1,9 +1,0 @@
-User-agent: *
-Disallow: /admin/
-Allow: /publico/
-Allow: /blog/
-Allow: /productos/
-
-
-
-Sitemap: https://xunito.tech/sitemap.xml
