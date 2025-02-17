@@ -245,10 +245,10 @@
       const url = window.location.href;
 
       const message = `Hola, estoy interesado en el servicio: ${service}%0A%0A` +
-        `Nombre: ${name}%0A` +
-        `Correo: ${email}%0A` +
-        `Teléfono: ${phone}%0A` +
-        `URL: ${url}`;
+        `*Nombre:* _${name}_%0A` +
+        `*Correo:* _${email}_%0A` +
+        `*Teléfono:* _${phone}_%0A` +
+        `*URL:* _${url}_`;
 
       window.open(`https://wa.me/529618137702?text=${message}`, '_blank');
     }
