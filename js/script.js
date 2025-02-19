@@ -108,5 +108,65 @@ window.onload = function() {
 
 
 
+function submitForm() {
+  const name = document.getElementById('name').value.trim();
+  const email = document.getElementById('email').value.trim();
+  const phone = document.getElementById('phone').value.trim();
+
+  if (!name || !email || !phone) {
+    Swal.fire({
+      icon: 'error',
+      title: 'Oops...',
+      text: 'Por favor, completa todos los campos antes de enviar.',
+      confirmButtonColor: '#3085d6',
+    });
+    return;
+  }
+
+  $('#contactModal').modal('hide');
+  document.getElementById('contactForm').reset();
+  Swal.fire({
+    icon: 'success',
+    title: '¡Formulario enviado!',
+    text: 'Gracias por contactarnos. Nos pondremos en contacto contigo pronto.',
+    confirmButtonColor: '#28a745',
+  });
+}
+
+function sendViaWhatsApp() {
+  const name = document.getElementById('name').value.trim();
+  const email = document.getElementById('email').value.trim();
+  const phone = document.getElementById('phone').value.trim();
+  const service = $('#contactModal').data('service');
+  const url = window.location.href;
+
+  if (!name || !email || !phone) {
+    Swal.fire({
+      icon: 'error',
+      title: 'Oops...',
+      text: 'Por favor, completa todos los campos antes de enviar.',
+      confirmButtonColor: '#3085d6',
+    });
+    return;
+  }
+
+  const message = `Hola, estoy interesado en el servicio: ${service}%0A%0A` +
+    `*Nombre:* _${name}_%0A` +
+    `*Correo:* _${email}_%0A` +
+    `*Teléfono:* _${phone}_%0A` +
+    `*URL:* _${url}_`;
+
+  Swal.fire({
+    icon: 'success',
+    title: 'Redirigiendo a WhatsApp...',
+    text: 'Por favor, espera mientras te llevamos al chat.',
+    showConfirmButton: false,
+    timer: 2000,
+  });
+
+  setTimeout(() => {
+    window.open(`https://wa.me/529618137702?text=${message}`, '_blank');
+  }, 2000);
+}
 
 
