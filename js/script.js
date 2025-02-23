@@ -152,7 +152,7 @@ function sendViaWhatsApp() {
 
   const message = `Hola, estoy interesado en el servicio: ${service}%0A%0A` +
     `*Nombre:* _${name}_%0A` +
-    `*Correo:* _${email}_%0A` +
+    `*Correo:* _${email}_%0A` + 
     `*Teléfono:* _${phone}_%0A` +
     `*URL:* _${url}_`;
 
@@ -170,3 +170,38 @@ function sendViaWhatsApp() {
 }
 
 
+fetch('icon/contact.json')
+.then(response => {
+    if (!response.ok) {
+        throw new Error(`HTTP error! Status: ${response.status}`);
+    }
+    return response.json();
+})
+.then(data => {
+    console.log("JSON cargado:", data); // Verifica en consola
+    const iconElement = document.getElementById("icono-contacto");
+    if (iconElement && data.icons && data.icons.contacto) {
+        iconElement.className = data.icons.contacto;
+    } else {
+        console.error("No se encontró el icono en el JSON");
+    }
+})
+.catch(error => console.error("Error cargando el JSON:", error));
+
+
+    const btnArriba = document.getElementById("btnArriba");
+
+    window.onscroll = function () {
+      if (document.documentElement.scrollTop > 100) {
+        btnArriba.style.display = "flex";
+      } else {
+        btnArriba.style.display = "none";
+      }
+    };
+
+    function scrollToTop() {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+    }
