@@ -16,10 +16,13 @@
   <meta property="og:site_name" content="xunito" />
 
   <link rel="icon" type="image/png" href="./xunimage/diseño de pagina.jpg">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600">
   <link rel="stylesheet" href="//cdn.jsdelivr.net/fontawesome/4.1.0/css/font-awesome.css">
+  <link rel="stylesheet" href="./css/style.css">
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
   <link rel="stylesheet" href="./css/style.css">
@@ -49,6 +52,10 @@
 </head>
 
 <body>
+  <button id="btnArriba" onclick="scrollToTop()">
+    <i class="fa-solid fa-arrows-up-to-line"></i>
+    <span id="tooltip" class="tooltip">Ir a superior</span>
+  </button>
   <div class="loader">
    
     <div class="dots">
@@ -104,7 +111,7 @@
         <div class="service" data-toggle="modal" data-target="#contactModal" data-service="Diseño Crear desde inicio">
           <strong>Diseño Crear desde inicio:</strong>
           Diseñamos tu página web para negocios como ventas de abarrotes, restaurantes, productos de moda, etc.
-          <img src="iconos/diseño.jpg" alt="Diseño">
+          <img src="iconos/diseños.jpg" alt="Diseño">
         </div>
 
         <div class="service" data-toggle="modal" data-target="#contactModal" data-service="Optimización con SEO">
