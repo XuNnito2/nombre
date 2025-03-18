@@ -99,11 +99,13 @@ setTimeout(function() {
 
 
 window.onload = function() {
-  setTimeout(function() {
-    document.querySelector('.loader').classList.add('hidden');
-    document.getElementById('contenido').style.display = 'block';
-  }, 500);
+  setTimeout(hideLoaderAndShowContent, 500);
 };
+
+function hideLoaderAndShowContent() {
+  document.querySelector('.loader').classList.add('hidden');
+  document.getElementById('contenido').style.display = 'block';
+}
 
 
 
@@ -134,7 +136,7 @@ Swal.fire({
     confirmButtonColor: '#28a745'
 }).then((result) => {
     if (result.isConfirmed) {
-        window.location.href = 'https://xunito.tech/design/#';
+        window.location.href = 'https://xunito.tech/design#';
       }
     });
 
