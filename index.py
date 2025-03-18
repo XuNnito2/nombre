@@ -1,0 +1,1 @@
+print("Cargando filtro... 99%... filtro aplicado 100%")

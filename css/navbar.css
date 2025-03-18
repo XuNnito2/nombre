@@ -1,0 +1,121 @@
+
+
+.navbar-logo {
+    padding: 0px;
+    color: #ffffff;
+  
+  
+  }
+  
+  .navbar-mainbg {
+    background: linear-gradient(45deg, #000000 20%, #6d6e6e 50%, #ffffff 100%);
+    padding: 10px;
+    border-bottom-left-radius: 20px;
+    animation: gradient 5s ease infinite;
+    background-size: 200% 200%;
+    /* Aumentamos el tamaño del fondo para que se pueda animar */
+    animation: moverColores 4s infinite alternate ease-in-out;
+  
+  }
+  
+  
+  @keyframes moverColores {
+    0% {
+      background-position: 0% 10%;
+      /* Posición inicial del gradiente */
+    }
+  
+    100% {
+      background-position: 100% 50%;
+      /* Posición final del gradiente */
+    }
+  }
+  
+  @keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+  
+  
+  
+    50% {
+      background-position: 100% 50%;
+    }
+  
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  
+  #navbarSupportedContent {
+    overflow: hidden;
+    position: relative;
+  }
+  
+  
+  #navbarSupportedContent ul {
+    padding: 0px;
+    margin: 0px;
+  
+  }
+  
+  #navbarSupportedContent ul li a i {
+    margin-right: 10px;
+  }
+  
+  #navbarSupportedContent li {
+    list-style-type: none;
+    float: left;
+  }
+  
+  #navbarSupportedContent ul li a {
+    color: #fffffffd;
+    text-decoration: none;
+    font-size: 12px;
+    display: block;
+    padding: 20px 20px;
+    transition-duration: 0.6s;
+    transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    position: relative;
+  }
+  
+  #navbarSupportedContent>ul>li.active>a {
+    background-color: #6f7671;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    transition: all 0.7s;
+  }
+  
+  #navbarSupportedContent>ul>li:hover {
+    top: 0;
+    left: 0;
+    background-color: hsla(135, 18%, 62%, 0.568);
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+  }
+  
+  #navbarSupportedContent>ul>li:hover>a {
+    color: rgb(0, 0, 0) !important;
+    /* Forzar el color blanco */
+  }
+  
+  #navbarSupportedContent a:not(:only-child):after {
+    content: "\f105";
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    font-size: 14px;
+    font-family: "Font Awesome 5 Free";
+    display: inline-block;
+    padding-right: 3px;
+    vertical-align: middle;
+    font-weight: 900;
+    transition: 0.5s;
+  }
+  
+  
+  
+  #navbarSupportedContent .active>a:not(:only-child):after {
+    transform: rotate(180deg);
+  }

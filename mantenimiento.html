@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mantenimiento IA Tsotsil</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            color: white;
+        }
+        .background {
+            position: fixed;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, #ff416c, #ff4b2b, #1d2671, #c33764);
+            background-size: 400% 400%;
+            animation: moveBackground 10s linear infinite;
+        }
+        @keyframes moveBackground {
+            0% { background-position: 0% 0%; }
+            50% { background-position: 100% 100%; }
+            100% { background-position: 0% 0%; }
+        }
+        .container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+        }
+        .comment {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+        .maintenance {
+            font-size: 40px;
+            font-weight: bold;
+            animation: blink 1.5s infinite alternate;
+        }
+        @keyframes blink {
+            0% { opacity: 1; }
+            100% { opacity: 0.5; }
+        }
+    </style>
+</head>
+<body>
+    <div class="background"></div>
+    <div class="container">
+        <p class="comment">Pronto necesitamos tu colaboración para que nos apoyes en la construcción de IA en versión tsotsil. Para lograrlo, podemos empezar con palabras que te gustaría que te traduzcan.</p>
+        <p class="maintenance">POR EL MOMENTO NUESTRA PAGINA ESTÁ EN MANTENIMIENTO</p>
+        <button style="font-size: 12px; padding: 5px 10px; color: white; border: none; border-radius: 5px; cursor: pointer;" onclick="window.location.href='https://xunito.tech';">Inicio</button>
+    </div>
+</body>
+<script>
+    
+</script>
+
+</html>

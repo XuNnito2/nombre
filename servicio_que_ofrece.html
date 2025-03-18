@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Servicio .:: .:: [diseño]</title>
+  <meta name="description" content="Ofrecemos servicios, si aún no tienes presencia en línea, podemos crear tu sitio web desde cero, contáctanos para poder ayudarte">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="keywords" content="XuNnito, xunito, XUNNITO, significado, origen, tsotsil, idioma tsotsil, México, cariño, xun, cultura indígena">
+  <meta name="author" content="XuNnito">
+  <meta property="og:url" content="https://xunito.tech" />
+  <meta property="og:title" content="Diseño .:: Xunito" />
+  <meta property="og:description" content="Descubre el significado de xunito" />
+  <meta property="og:image" content="https://raw.githubusercontent.com/XuNnito2/nombre/refs/heads/gh-pages/vistaprevia/previa.jpg" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="xunito" />
+
+  <link rel="icon" type="image/png" href="./xunimage/diseño de pagina.jpg">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/fontawesome/4.1.0/css/font-awesome.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/body.css">
+  <link rel="stylesheet" href="./css/navbar.css">
+  <style>
+    /* Estilos para los servicios */
+    .service {
+      cursor: pointer;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .service:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Estilos para el botón de WhatsApp */
+    .btn-whatsapp {
+      background-color: #25d366;
+      color: white;
+    }
+
+    .btn-whatsapp:hover {
+      background-color: #128C7E;
+      color: white;
+    }
+  </style>
+</head>
+
+<body>
+  <button id="btnArriba" onclick="scrollToTop()">
+    <i class="fa-solid fa-arrows-up-to-line"></i>
+    <span id="tooltip" class="tooltip">Ir a superior</span>
+  </button>
+  <div class="loader">
+   
+    <div class="dots">
+      <div class="dot">X</div>
+      <div class="dot">u</div>
+      <div class="dot">N</div>
+      <div class="dot">n</div>
+      <div class="dot">i</div>
+      <div class="dot">t</div>
+      <div class="dot">o</div>
+      <div class="espera-internet">
+        <div class="circulo-carga"></div>
+        <h1>Esperando conexión de internet...</h1>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-custom navbar-mainbg fixed-top">
+    <a class="navbar-brand navbar-logo" href="https://xunito.tech">
+      <h1 style="text-align: center;">XUNITO</h1>
+    </a>
+    <button class="navbar-toggler" type="button" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <i class="fas fa-bars text"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+        <div class="hori-selector">
+          <div class="left"></div>
+          <div class="right"></div>
+        </div>
+        <li class="nav-item">
+          <a class="nav-link" href="https://xunito.tech"><i class="fas fa-home"></i>INICIO</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contacto"><i class="fa fa-phone"></i>CONTACTO CON XUNITO</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="design"><i class="fa fa-cogs"></i>SERVICIO QUE OFRECE</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <div class="xun3 mobile-view">
+      <h1><b>Brindamos Servicios <p>de Diseño Web</p></b></h1>
+      <hr>
+      <p>¡Bienvenido a mis servicios de diseño y desarrollo web! Además de la creación de páginas web con HTML5, CSS y JavaScript, puedo ofrecerte otros servicios adicionales para mejorar tu presencia en línea de tu negocio:</p>
+
+      <!-- Servicios con modal -->
+      <div class="container-servicio">
+        <div class="service" data-toggle="modal" data-target="#contactModal" data-service="Diseño Crear desde inicio">
+          <strong>Diseño Crear desde inicio:</strong>
+          Diseñamos tu página web para negocios como ventas de abarrotes, restaurantes, productos de moda, etc.
+          <img src="iconos/diseños.jpg" alt="Diseño">
+        </div>
+
+        <div class="service" data-toggle="modal" data-target="#contactModal" data-service="Optimización con SEO">
+          <strong>Optimización con SEO:</strong>
+          Mejoramos el rendimiento de tu sitio web, optimizando la velocidad de carga.
+          <img src="iconos/seo.png" alt="SEO">
+        </div>
+
+        <div class="service" data-toggle="modal" data-target="#contactModal" data-service="Seguridad Web">
+          <strong>Seguridad Web:</strong>
+          Protege tu sitio web contra ataques cibernéticos.
+          <img src="iconos/seguridad.png" alt="Seguridad">
+        </div>
+
+        <div class="service" data-toggle="modal" data-target="#contactModal" data-service="Dominio Personalizado">
+          <strong>Dominio Personalizado:</strong>
+          Dirección web única que te representa en internet.
+          <img src="iconos/dominio.png" alt="Dominio">
+        </div>
+
+        <div class="service" data-toggle="modal" data-target="#contactModal" data-service="Atención a clientes con chatbot, WhatsApp e IA">
+          <strong>Atención a clientes con chatbot, WhatsApp e IA:</strong>
+          Transforma tu atención al cliente con un chatbot disponible 24/7.
+          <video autoplay loop muted>
+            <source src="https://bot-whatsapp.netlify.app/videos/xbmcc-kx99h.webm" type="video/webm">
+          </video>
+        </div>
+
+        <div class="service" data-toggle="modal" data-target="#contactModal" data-service="Integración de Redes Sociales">
+          <strong>Integración de Redes Sociales:</strong>
+          Conecta tu sitio web con plataformas sociales para más alcance.
+          <img src="iconos/redes.png" alt="Redes Sociales">
+        </div>
+      </div>
+
+      <p>¡Con mis servicios, puedes llevar tu presencia en línea al siguiente nivel y alcanzar el éxito digital que deseas!</p>
+      <p>¡No dudes en contactarme para discutir cómo puedo ayudarte a alcanzar tus objetivos en línea!</p>
+    </div>
+
+    
+    <!-- Redes sociales -->
+    <div class="xun5 mobile-view" style="text-align: center; font-family: 'Montserrat', sans-serif;">
+      <p style="margin-top: 1em;">
+        <a href="https://www.instagram.com/xunitou" target="_blank">
+          <img src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/instagram.svg" alt="instagram" height="30" width="40" />
+        </a>
+        <a href="https://www.facebook.com/xunitou" target="_blank">
+          <img src="https://icones.pro/wp-content/uploads/2021/02/facebook-icone-f.png" alt="facebook" height="30" width="40" />
+        </a>
+        <a href="https://api.whatsapp.com/send?phone=529618137702" target="_blank">
+          <img src="https://icones.pro/wp-content/uploads/2021/02/icone-du-logo-whatsapp-vert.png" alt="whatsapp" height="30" width="40" />
+        </a>
+        <a href="https://m.me/xunitou" target="_blank">
+          <img src="https://cdn-icons-png.flaticon.com/128/5968/5968771.png" alt="Messenger" height="30" width="40" />
+        </a>
+        <a href="https://t.me/xunitou" target="_blank">
+          <img src="https://cdn-icons-png.flaticon.com/128/2111/2111646.png" alt="Telegram" height="30" width="40" />
+        </a>
+      </p>
+      <h9>¡Sígueme en mis redes sociales!</h9>
+    </div>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="contactModal" tabindex="-1" role="dialog" aria-labelledby="contactModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="contactModalLabel">Solicitar Información</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form id="contactForm">
+            <div class="form-group">
+              <label for="name">Nombre:</label>
+              <input type="text" class="form-control" id="name" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Correo electrónico:</label>
+              <input type="email" class="form-control" id="email" required>
+            </div>
+            <div class="form-group">
+              <label for="phone">Teléfono:</label>
+              <input type="tel" class="form-control" id="phone" required>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-whatsapp" onclick="sendViaWhatsApp()">
+            <i class="fab fa-whatsapp"></i> Enviar por WhatsApp
+          </button>
+          <button type="button" class="btn btn-primary" onclick="submitForm()">Enviar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mensaje de éxito -->
+  <div id="successMessage" class="alert alert-success" style="display: none; position: fixed; top: 20px; right: 20px; z-index: 1000;">
+    Pronto nos contactaremos con usted.
+  </div>
+  <div class="xun3 img mobile-view">
+    <section class="slider">
+      <article>
+        <a href="diseño de pagina.jpg" target="_blank">
+          <image src="./xunimage/diseño de pagina.jpg" alt="xunito"><h2>Contacta conmigo</h2>
+  
+      </article>
+      <article>
+        <a href="https://pages.github.com/" target="_blank">
+          <image src="./xunimage/xun1.png" alt="xunito"> <h2>Git-pages</h2> </image>
+  
+      </article>
+      <article>
+        <a href="xun2.jpg" target="_blank">
+          <image src="./xunimage/xun2.jpg" alt="xunito"><h2>Sitios webS con react</h2>
+            <p></p>
+      </article>
+      <article>
+        <a href="xun3.png" target="_blank">
+          <image src="./xunimage/xun3.png" alt="xunito"> <h2>APK ios o android con react native </h2>
+      </article>
+    </section>
+  </div>
+    
+
+  <!-- Scripts -->
+  <script src='https://code.jquery.com/jquery-3.4.1.min.js'></script>
+  <script src='https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js'></script>
+  <script src='https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js'></script>
+  <script src="./js/script.js"></script>
+  
+</body>
+
+</html>
