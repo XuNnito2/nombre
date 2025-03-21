@@ -99,13 +99,11 @@ setTimeout(function() {
 
 
 window.onload = function() {
-  setTimeout(hideLoaderAndShowContent, 500);
+  setTimeout(function() {
+    document.querySelector('.loader').classList.add('hidden');
+    document.getElementById('contenido').style.display = 'block';
+  }, 500);
 };
-
-function hideLoaderAndShowContent() {
-  document.querySelector('.loader').classList.add('hidden');
-  document.getElementById('contenido').style.display = 'block';
-}
 
 
 
@@ -125,20 +123,15 @@ function submitForm() {
     return;
   }
 
-
-
   $('#contactModal').modal('hide');
-document.getElementById('contactForm').reset();
-Swal.fire({
+  document.getElementById('contactForm').reset();
+  Swal.fire({
     icon: 'success',
     title: '¡Formulario enviado!',
     text: 'Gracias por contactarnos. Nos pondremos en contacto contigo pronto.',
-    confirmButtonColor: '#28a745'
-}).then((result) => {
-    if (result.isConfirmed) {
-        window.location.href = 'https://xunito.tech/design#';
-      }
-    });
+    confirmButtonColor: '#28a745',
+  });
+}
 
 function sendViaWhatsApp() {
   const name = document.getElementById('name').value.trim();
@@ -212,4 +205,3 @@ fetch('icon/contact.json')
         behavior: "smooth"
       });
     }
-  }
