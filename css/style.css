@@ -204,39 +204,70 @@ header {
   width: 96%;
 
 }
-
-
 .xun3 h2 {
   font-family: Arial, sans-serif;
   font-size: 1em;
   color: black;
 }
-
 .xun3 {
   margin-top: 10px;
   margin-left: 8px;
   border-radius: 10px;
   padding: 10px;
   width: 98.8%;
-  margin-top: 0.8%;
-  background: linear-gradient(to bottom, #ffffff91 20%, #e7faefce 50%);
+  margin-top:0.8%;
+  background: linear-gradient(to bottom, #bfd5d6b7 20%, #e7faef88 50%);
   animation: gradient 5s ease infinite;
 }
-
-.xun3 img {
-  width: 30px;
-  height: 30px;
+ .xun3 img {
+  width: 50px;
+  height: 50px;
   object-fit: cover;
   border-radius: 30%;
   flex: 0 0 auto;
 }
-.xun3 img:hover{
+
+@media (max-width: 767px) {
+  .xun3 {
+    margin-top: -20px;
+    margin-left: 8px;
+    width: 96%;
+  }
+}
+
+
+.xun33 h2 {
+  font-family: Arial, sans-serif;
+  font-size: 1em;
+  color: rgb(255, 252, 252);
+}
+
+.xun33 {
+  margin-top: 10px;
+  margin-left: 8px;
+  color: #cee4e4;
+  border-radius: 10px;
+  padding: 10px;
+  width: 98.8%;
+  margin-top: 0.8%;
+  background: linear-gradient(to bottom, #ffffff00 20%, #e7faef00 50%);
+  animation: gradient 5s ease infinite;
+}
+
+.xun33 img {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 30%;
+  flex: 0 0 auto;
+}
+.xun33 img:hover{
   transform: scale(1.1);  
 }
 
 
 @media (max-width: 767px) {
-  .xun3 {
+  .xun33 {
     margin-top: -20px;
     margin-left: 8px;
     width: 96%;
@@ -464,8 +495,8 @@ footer {
 
 .social-links a {
         color: #fff;
-        margin: 0 10px;
-        font-size: 18px;
+        margin: 0 2px;
+        font-size: 15px;
     }
     a {
         color: #ffcc00;
@@ -474,6 +505,7 @@ footer {
     a:hover {
         text-decoration: underline;
     }
+    
     footer {
         background-color: rgba(51, 51, 51, 0);
         color: #fff;
@@ -519,7 +551,7 @@ footer {
 
 .slider article {
   flex: 0 0 auto;
-  padding: 20px;
+  padding: 10px;
   margin: 0 px;
   text-align: center;
   border-radius: 15px;
@@ -529,10 +561,10 @@ footer {
 
 article:hover {
   cursor: pointer;
-  background: linear-gradient(90deg, #0a0a0a 20%, #cee4e4 50%, #ffffff 100%);
+  background: linear-gradient(120deg, #0a0a0a 20%, #cee4e4 50%, #ffffff 100%);
   border: rgba(0, 0, 0, 0.7) solid 1px;
-  background-size: 200% 200%;
-  /* Aumentamos el tamaño del fondo para que se pueda animar */
+  background-size: 400% 200%;
+  
   animation: gradient 5s ease infinite;
   animation: moverColores 4s infinite alternate ease-in-out;
 
@@ -541,11 +573,11 @@ article:hover {
 .slider img {
   width: 80%;
   margin-left: -5px;
-  margin-top: 10px;
-  height: 200px;
+  margin-top: 1px;
+  height: 230px;
   object-fit: cover;
   border-radius: 25px;
-  flex: 0 0 auto;
+  flex: 10 10 auto;
   transition: transform 0.3s ease-in-out;
 }
 
@@ -563,12 +595,13 @@ article:hover {
   z-index: 1;
 }
 
+
 .slider img h1 {
   position: relative;
   margin-top: 30px;
   margin-left: 0px;
   font-size: 15px;
-  color: black;
+  color: rgb(255, 255, 255);
 }
 
 .slider article:hover::after p {
