@@ -1029,3 +1029,15 @@ article image:hover .tooltip {
   opacity: 1;
 }
 
+
+#contador {
+  text-align: center;
+  display: inline;
+}
+
+#segundos {
+  font-size: 28px;
+  color: #d9534f;
+  font-weight: bold;
+  display: inline;
+}

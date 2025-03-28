@@ -56,6 +56,31 @@
 </head>
 
 <body>
+  <div id="logo-container" style="display: flex; justify-content: center; align-items: center; height: 100vh; background-color: #fff; animation: fadeInOut 5s ease-in-out;">
+    <img src="favicon.png" alt="Logo" style="max-width: 100%; max-height: 100%; animation: zoomInOut 5s ease-in-out;">
+  </div>
+
+  <script>
+    setTimeout(() => {
+      document.getElementById('logo-container').style.display = 'none';
+    }, 5000);
+  </script>
+
+  <style>
+    @keyframes fadeInOut {
+      0% { opacity: 0; }
+      10% { opacity: 1; }
+      90% { opacity: 1; }
+      100% { opacity: 0; }
+    }
+
+    @keyframes zoomInOut {
+      0% { transform: scale(0.5); }
+      10% { transform: scale(1); }
+      90% { transform: scale(1); }
+      100% { transform: scale(0.5); }
+    }
+  </style>
   <div class="loader">
 
     <div class="dots">
@@ -78,6 +103,10 @@
 
   <div id="anuncio" class="anuncio" style="text-align: center;">
     <div>
+      <div id="contador">
+        <h1 style="color: rgb(255, 255, 255);">Segundos restantes: <p id="segundos">4</p></h1>
+       
+    </div>
       <span class="close-btn" onclick="cerrarAnuncio()" style="font-weight: bold; font-size: larger;">CERRAR</span>
       <a href="https://xunito.tech/design" target="_blank" rel="noopene">
         <img src="./xunimage/diseño de pagina.jpg" alt="Anuncio" class="anuncio-img">

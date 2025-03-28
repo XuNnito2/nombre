@@ -1,4 +1,21 @@
-// ---------Responsive-navbar-active-animation-----------
+
+
+let segundos = 8;
+
+
+function actualizarContador() {
+  if (segundos >= 0) {
+    document.getElementById("segundos").textContent = segundos;
+    segundos--;
+  }
+}
+
+setInterval(actualizarContador, 1000);
+
+
+
+
+
 function test() {
   var tabsNewAnim = $("#navbarSupportedContent");
   var selectorNewAnim = $("#navbarSupportedContent").find("li").length;
@@ -47,50 +64,52 @@ $(".navbar-toggler").click(function () {
 
 
 jQuery(document).ready(function ($) {
- 
+
   var path = window.location.pathname.split("/").pop();
 
-  
+
   if (path == "") {
     path = "index.html";
   }
 
   var target = $('#navbarSupportedContent ul li a[href="' + path + '"]');
-  
+
   target.parent().addClass("active");
 });
 
 
 
-$("#showmenu").click(function(e) {
+$("#showmenu").click(function (e) {
   $("#menu").toggleClass("show");
   if ($("#menu").hasClass("show")) {
-      setTimeout(function() {
-          $("#menu").removeClass("show");
-      }, 100000);
+    setTimeout(function () {
+      $("#menu").removeClass("show");
+    }, 100000);
   }
 });
 
-$("#menu a").click(function(event) {
+$("#menu a").click(function (event) {
   if ($(this).next('ul').length) {
-      event.preventDefault();
-      $(this).next().toggle('fast');
-      $(this).children('i:last-child').toggleClass('fa-caret-down fa-caret-left');
+    event.preventDefault();
+    $(this).next().toggle('fast');
+    $(this).children('i:last-child').toggleClass('fa-caret-down fa-caret-left');
   }
 });
 
 document.addEventListener('DOMContentLoaded', () => {
-    // Aquí agregar funcion
-    console.log('JavaScript cargado correctamente');
+  
+  console.log('JavaScript cargado correctamente');
 });
+
+
 document.addEventListener('DOMContentLoaded', function () {
-    document.getElementById('anuncio').style.display = 'flex';
+  document.getElementById('anuncio').style.display = 'flex';
 });
 
 function cerrarAnuncio() {
-    document.getElementById('anuncio').style.display = 'none';
+  document.getElementById('anuncio').style.display = 'none';
 }
-setTimeout(function() {
+setTimeout(function () {
   cerrarAnuncio();
 }, 9000);
 
@@ -98,13 +117,12 @@ setTimeout(function() {
 
 
 
-window.onload = function() {
-  setTimeout(function() {
+document.addEventListener('DOMContentLoaded', function () {
+  setTimeout(function () {
     document.querySelector('.loader').classList.add('hidden');
     document.getElementById('contenido').style.display = 'block';
-  }, 500);
-};
-
+  }, 5000); // 5 segundos
+});
 
 
 
@@ -152,7 +170,7 @@ function sendViaWhatsApp() {
 
   const message = `Hola, estoy interesado en el servicio: ${service}%0A%0A` +
     `*Nombre:* _${name}_%0A` +
-    `*Correo:* _${email}_%0A` + 
+    `*Correo:* _${email}_%0A` +
     `*Teléfono:* _${phone}_%0A` +
     `*URL:* _${url}_`;
 
@@ -171,37 +189,37 @@ function sendViaWhatsApp() {
 
 
 fetch('icon/contact.json')
-.then(response => {
+  .then(response => {
     if (!response.ok) {
-        throw new Error(`HTTP error! Status: ${response.status}`);
+      throw new Error(`HTTP error! Status: ${response.status}`);
     }
     return response.json();
-})
-.then(data => {
+  })
+  .then(data => {
     console.log("JSON cargado:", data); // Verifica en consola
     const iconElement = document.getElementById("icono-contacto");
     if (iconElement && data.icons && data.icons.contacto) {
-        iconElement.className = data.icons.contacto;
+      iconElement.className = data.icons.contacto;
     } else {
-        console.error("No se encontró el icono en el JSON");
+      console.error("No se encontró el icono en el JSON");
     }
-})
-.catch(error => console.error("Error cargando el JSON:", error));
+  })
+  .catch(error => console.error("Error cargando el JSON:", error));
 
 
-    const btnArriba = document.getElementById("btnArriba");
+const btnArriba = document.getElementById("btnArriba");
 
-    window.onscroll = function () {
-      if (document.documentElement.scrollTop > 100) {
-        btnArriba.style.display = "flex";
-      } else {
-        btnArriba.style.display = "none";
-      }
-    };
+window.onscroll = function () {
+  if (document.documentElement.scrollTop > 100) {
+    btnArriba.style.display = "flex";
+  } else {
+    btnArriba.style.display = "none";
+  }
+};
 
-    function scrollToTop() {
-      window.scrollTo({
-        top: 0,
-        behavior: "smooth"
-      });
-    }
+function scrollToTop() {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+}
